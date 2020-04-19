@@ -1,0 +1,19 @@
+# To let the CI execute the maven wrapper, use this command and push the change:
+#    git update-index --chmod=+x mvnw
+
+language: java
+jdk:
+  - openjdk11
+
+script:
+  - ./mvnw clean package
+
+cache:
+  directories:
+    - $HOME/.m2
+
+notifications:
+  slack:
+    secure: "mvpnFtx/jTJRJoq6fF7Xye+qz0QOr4yve2qDx4cqnn1x4BcLr662co30s3FCgzoqEdk0XNXT5kgbaZGDbiYvDGDmIciLDQ2IteVV1sodqLMN3c+PaAfGUBkKt6/7AhrFreDFp63FNnMcu9KG4ce9lUljUoUOpW7yTS5vHHIiVj8pBSfKAOSzkHbsQzJFf2Vml3KUb7PoZh8e1spMsEGCm2G0F1KkbSzqiGDGYj9La/SZcU/uw7T9o/Xj46j6VL2OKDXNkbph5jwI2dKNLchL6w7N2d4a1LpE+QOBuSQTA0mFK0WCo5KsLLTMwYeedJkBroTEj2I9F4XdLvVkvVk8CoioWv/yZoRUICfpDoUYaoQ4vENj4peADP4AhADc7CxRF6GB/1eGYWO9vwZ86YlM8w/lCAY46LlBMrE/Dmz4hJO6TnNIsmSwMTdgwB185q+x/CCkpZtuh5oKpJDtSKSmGvmi7TYZTYuog8AjuANUIeO+6/bWF0V3UPpZXvH8o82rJ49ydk0P/WycodSbK13h16E+QI06gmLiAKubJ/F3PF5fHxWIX5cy88Ku1JhBFrPORMBWMGDHLQXZM0HG1Uq1TD2xXQrp1onRZlKwU8DcV3oHYFx7XTgcIatc1FJH/gQUswaJ6oO2BuSPO0DTWj0iCW2apKTlHuVDU1KCsBalIw8="
+  email: false
+
